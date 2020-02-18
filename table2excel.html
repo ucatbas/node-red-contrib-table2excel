@@ -1,0 +1,34 @@
+<script type="text/javascript">
+    RED.nodes.registerType('table2excel',{
+        category: 'function',
+        color: '#4ABEDD',
+        defaults: {
+            name: {value:""},
+            file: {value:""}
+        },
+        inputs:1,
+        outputs:1,
+        align: 'right',
+        paletteLabel:"table2excel",
+        label: function() {
+            return this.name||"table2excel";
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="table2excel">
+  
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Table2Excel">
+
+    </div>
+</script>
+
+<script type="text/html" data-help-name="table2excel">
+    <p>Converts an array to excel and writes to the file specified</p>
+    <p>Expects the array to be <b>msg.array</b></p>
+    <p>Expects the column names as an array to be <b>msg.columns</b></p>
+    <p>Expects the worksheet name as a string to be <b>msg.wsname</b></p>
+    <p>Expects the excel filename as a string to be <b>msg.filename</b></p>
+</script>

@@ -1,0 +1,13 @@
+{
+    "name": "node-red-contrib-table2excel",
+    "description": "A node-red node to provide and format excel file according to inputs given.",
+    "author": {
+        "name": "Ufuk Civan Atbas"
+    },
+    "version": "1.0.0",
+    "node-red": {
+        "nodes": {
+            "table2excel": "table2excel.js"
+        }
+    }
+}
