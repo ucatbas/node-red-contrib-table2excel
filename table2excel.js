@@ -11,7 +11,6 @@ module.exports = function (RED) {
 
             worksheet = workbook.addWorksheet('mysheet');
             worksheet.properties.defaultRowHeight = 120;
-            //worksheet.eachCell.alignment =  { wrapText: true };
             worksheet.columns = [
                 { header: 'No',  width: 2.33 },
                 { header: 'Bölüm/Takım', width: 8.78  },
@@ -46,24 +45,9 @@ module.exports = function (RED) {
 
                 worksheet.addRow(rowValues);
 
-
-               // var cnt = i+1;
-               // var cntS = cnt.toString();
-                //var imageFile = 'C:\\Users\\26049212\\.node-red\\node_modules\\node-red-contrib-table2excel\\images\\image' + cntS +'.jpg';
-                //var imageFile = 'https://www.generalosgb.com/images/isg-uzmani-ve-odasi.jpg';
-                /*var imageId1 = workbook.addImage({
-                    href: imageFile,
-                    extension: 'jpg',
-                  });
-                  cnt = i+2;
-                  cntS = cnt.toString();
-                var currCell = 'C'+cntS+':C'+cntS;
-                worksheet.addImage(imageId1, currCell);*/
-
-
            }
          
-            workbook.xlsx.writeFile('D:\\Users\\26049212\\OneDrive - ARÇELİK A.Ş\\Desktop\\ChatBot\\files\\test.xlsx');
+            workbook.xlsx.writeFile('test.xlsx');
 
             node.send(msg);
 
